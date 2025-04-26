@@ -1,28 +1,45 @@
+/* src/components/FAQAccordion.css */
+
 .accordion {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 0 20px;
-  }
-  
-  .faq-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .faq-question {
-    padding: 16px;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #f4f4f4;
-  }
-  
-  .faq-answer {
-    padding: 16px;
-    border-top: 1px solid #ddd;
-    background-color: #fff;
-  }
-  
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px; /* adjust based on content size */
+  padding: 1rem 0;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}

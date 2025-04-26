@@ -1,5 +1,8 @@
+// src/components/FAQAccordion.jsx
+
 import React, { useState } from 'react';
-import './components/FAQAccordion.css';
+import './FAQAccordian.css';
+
 
 const faqs = [
   {
@@ -25,18 +28,28 @@ const FAQAccordion = () => {
 
   return (
     <div className="accordion">
-      {faqs.map((faq, index) => (
-        <div key={index} className={`faq-item ${openIndex === index ? 'open' : ''}`}>
-          <div className="faq-question" onClick={() => toggleFAQ(index)}>
-            {faq.question}
-          </div>
-          {openIndex === index && (
+      {faqs.map((faq, index) => {
+        const isOpen = openIndex === index;
+        return (
+          <div key={faq.question} className={`faq-item ${isOpen ? 'open' : ''}`}>
+            <div
+              className="faq-question"
+              role="button"
+              tabIndex={0}
+              onClick={() => toggleFAQ(index)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') toggleFAQ(index);
+              }}
+            >
+              {faq.question}
+              <span className={`arrow ${isOpen ? 'rotate' : ''}`}>▼</span>
+            </div>
             <div className="faq-answer">
               {faq.answer}
             </div>
-          )}
-        </div>
-      ))}
+          </div>
+        );
+      })}
     </div>
   );
 };
