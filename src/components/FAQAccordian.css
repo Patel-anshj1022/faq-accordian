@@ -1,0 +1,28 @@
+.accordion {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  
+  .faq-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-question {
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f4f4f4;
+  }
+  
+  .faq-answer {
+    padding: 16px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+  }
+  

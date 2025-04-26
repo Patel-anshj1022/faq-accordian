@@ -1,14 +1,21 @@
 {
-  "name": "my-faq-app",
+  "name": "faq-accordion-app",
   "version": "1.0.0",
-  "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "lucide-react": "^0.263.0"
+  "private": true,
+  "description": "A simple React FAQ Accordion app using plain CSS",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "tailwindcss": "^3.4.1",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21"
+  "keywords": ["react", "faq", "accordion", "plain-css"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
   }
 }
